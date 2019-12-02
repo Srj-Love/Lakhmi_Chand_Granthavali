@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#900001"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="
+        ाई धोरै माँ जाया भाई, चाहता बैठणा पास नहीं,
+    मात—पिता गुरू शिष्य नै कहैं, मेरे चरण का दास नहीं,
+    बीर और मर्द कमाकै ल्यादें, पेट भरण की आस नहीं,
+    मित्र बणकै दगा कमाज्यां, नौकर का विश्वास नहीं,
+    जब से गारत महाभारत मैं, अठारा अक्षोणी दल होग्या ।1।"
+        android:textColor="#ecaa00"
+        android:textSize="20sp" />
+
+</RelativeLayout>

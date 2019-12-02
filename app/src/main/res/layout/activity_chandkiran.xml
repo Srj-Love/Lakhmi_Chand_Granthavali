@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chandkiran">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/cdk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="कथासार :—"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="1-फोटू चीज दुकान में दुनिया ....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="2-कागज की तस्वीर कड़े तै ....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="3-छत्रधारी राजा भूल में....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="4-चीज मिली सै लहणे आली....."
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="5-या कागज पै कौण कड़े....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="6-इसनै परे सी हटाले हो यो ....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="7-फोटू दियासिलाई नै....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="8-तनै के सोची निरभाग ....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textColor="#28ac00"/>
+
+
+        <Button
+            android:id="@+id/cd9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="9-राहणदे क्यूं घणी मिलावै ....  ."
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="10-हुर का चन्दकिरण सै नाम..."
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="11-दीन से बेदीन हुआ....  ."
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textColor="#28ac00"/>
+
+
+        <Button
+            android:id="@+id/cd12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="12-मैं पूरा सूं पैज परण का....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="13-बाबा जी मेरे कान पाड़ले ....  "
+            android:textAlignment="textStart"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="14-समझ गया तेरी बात नै....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+
+        <Button
+            android:id="@+id/cd15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="15-मदनसैन, बाबा के आगै ....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:text="16-मनै बतादे बाबा जी तेरे ....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="17-इश्क विषय में रोंए जांगा ....  "
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="18-दोनुवां में तै एक काम कर ....  "
+            android:textAlignment="textStart"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="19-देख्यां चन्दाकिरण का महल....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="20-मेरे दुख सुख की जाणैं ....  "
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:background="@drawable/ripple"
+            android:text="21-हो बाबाजी धूणां ठाले....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="22-बाबाजी जाइये ऊठ....  "
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="23-धूणां ठाले हो बाबा जी, ....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="24-जा उस चन्दकिरण तैं कहदे....  ."
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="25-मैं क्यों भांजी मारूं थारे ..."
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+
+        <Button
+            android:id="@+id/cd26"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="26-बिराणे माणस मरवावण का ....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+
+        <Button
+            android:id="@+id/cd27"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="27-री कदे तलै आणं पडै ना ....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd28"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="28-बान्दी हो कै ठाडू ....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd29"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="29-सोवै सै के डाण अटारी मैं....  ."
+            android:textAlignment="textStart"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="30-बाबाजी की श्यान देख कै ....  "
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd31"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="31-अरै बान्दी हम नै भी सुण ....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+
+
+
+        <Button
+            android:id="@+id/cd32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="32-हे मैं मरगी, इस बाबा जी  ....  "
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+
+        <Button
+            android:id="@+id/cd33"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="33-बोली रै, बोली रै, कौण या ....  "
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+
+        <Button
+            android:id="@+id/cd34"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="34-करणी ना ठीक लड़ाई हे....  "
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+
+        <Button
+            android:id="@+id/cd35"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="35-जीवती गुण भूलूं ना तेरा....  "
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd36"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="36-मरवा कै पति बिराणा....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd37"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="37-मेरी बाजै बीन गलियारे ....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd38"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="38-इसी बजाई बीन सपेले ....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd39"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="39-भूप तेरे दरबार बुलाले....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+
+        <Button
+            android:id="@+id/cd40"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="40-ईनाम देण की खातिर ....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd41"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="41-इस बाबा जी के साथ बिठा ....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd42"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="42-तीन वचन मनैं भर राखे ....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd43"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="43-अनर्थ करवावै सै रै क्यूं ....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd44"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="44-आगै डोला जब चालैगा ..."
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+        <Button
+            android:id="@+id/cd45"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="45-एक मर्द संग दो बीरां की ....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"/>
+
+
+
+        <Button
+            android:id="@+id/cd46"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="46-ले चालै तै साथ मैं, फेर ....  "
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:textColor="#28ac00"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"/>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</ScrollView>

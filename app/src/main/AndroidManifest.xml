@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.jks.android.myapplication">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".P60"
+            android:label="34-तेरा पूर्णमल बदमाश मेरे तै"/>
+
+
+        <activity android:name=".P34"
+            android:label="24-बूढा बालम बीर सवासण जतन"/>
+        <activity android:name=".nd48" />
+        <activity android:name=".updashek" />
+        <activity android:name=".heerranja" />
+        <activity android:name=".jaynichor" />
+        <activity android:name=".chandkiran" />
+        <activity android:name=".padmavat" />
+        <activity android:name=".notanki" />
+        <activity android:name=".kichakparv" />
+        <activity android:name=".chirparv" />
+        <activity android:name=".meerabai" />
+        <activity android:name=".sahilakadhara" />
+        <activity android:name=".datacg" />
+        <activity
+            android:name=".chnder"
+            android:label="सेठ ताराचन्द–भाग 2" />
+        <activity android:name=".Datast" />
+        <activity android:name=".P59" />
+        <activity android:name=".SethTarachand" />
+        <activity android:name=".Data" />
+        <activity android:name=".Chapsingh" />
+        <activity
+            android:name=".rh57"
+            android:label="57- थारी यारी बिना हे! प्रभु...." />
+        <activity
+            android:name=".rh56"
+            android:label="56- के दुनियां मै टूक जबर था...." />
+        <activity
+            android:name=".rh55"
+            android:label="55- एक तेरे केसा उत और था...." />
+        <activity
+            android:name=".rh54"
+            android:label="54-जै तेरी डाण निगाह मै  ...." />
+        <activity
+            android:name=".rh53"
+            android:label="53- के रहै थी पटे बिन जाण.... " />
+        <activity
+            android:name=".rh52"
+            android:label="52- दूर तै बतला ले सजन...." />
+        <activity
+            android:name=".rh51"
+            android:label="51-क्यूं मेरी छाती पै चढरया.... " />
+        <activity
+            android:name=".rh50"
+            android:label="50- कलिहारी, तनै लड़का खा  ...." />
+        <activity
+            android:name=".rh49"
+            android:label="49-बण कै आज्ञाकारी चाल्या ...." />
+        <activity
+            android:name=".rh48"
+            android:label="48-राणी ठा बेटे की लाश...." />
+        <activity
+            android:name=".rh47"
+            android:label="47-यो सै कफन मेरे बेटे का साजन...." />
+        <activity
+            android:name=".rh46"
+            android:label="46-सवा रूपया नगद लिया करै ...." />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".sataywan"
+            android:label="सत्यवान-सावित्री"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ss1"
+            android:label="1- धर्म पुत्र कहैं नही दुखी कोये.... "
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss2"
+            android:label="2- ले छत्री वरदान लिये जो ब्रह्मा.... "
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss3"
+            android:label="3- सावित्री नै समय पै आकै सिर...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss4"
+            android:label=" 4- तनै सावित्री का भी कुछ....    "
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".kavip"
+            android:label="कवि परिचय"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".saang"
+            android:label="सांग संग्रह"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ss5"
+            android:label="5- वेद रीत और हवन कुण्ड....  "
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss6"
+            android:label="6-मैं फिर लिया जगत जहान मैं....  "
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss7"
+            android:label="7-जवान अवस्था देख कै बोल्या...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss8"
+            android:label="8-हे प्रभू मन मोहवण ने या.... "
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss9"
+            android:label="9-झट हाथ जोड कै लडकी....  "
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss10"
+            android:label="10- मेरे सिर पै खोटा मन्दा....  "
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss11"
+            android:label="11- नारद जी बोले कुछ पहचान....  "
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss12"
+            android:label="12-सब सामग्री कट्ठी करकै बडा...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss13"
+            android:label="13-राज पाठ छूटै जिनका...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss14"
+            android:label="14-दूम्मतसैन सूण बात मेरी मैं...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss15"
+            android:label="15-अपणी शरण के मैं ले ले तेरे...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss16"
+            android:label="16- आ री बहू, दिल प्यारी बहू...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss17"
+            android:label="17-  शादी करी मेरे पुत्र की मेरे...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss18"
+            android:label="18-पिता के गए पे गहणे वस्त्र...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss19"
+            android:label="19-किसे तै ना भेद खोलै ख्याल...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss20"
+            android:label="20- तीन दिन और रात का एक...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss21"
+            android:label="21-सास ससुर और ब्राह्मणों को...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss22"
+            android:label="22- हो पिया मैं भी चलूंगी तेरी...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss23"
+            android:label="23-विकट बाट बणखण्ड का चलना...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss24"
+            android:label="24- फल लेने की इच्छा करकै जा...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss25"
+            android:label="25- सुसर की सुण कै हंसती चाली...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss26"
+            android:label="26- सावित्री मेरा हाथ पकड कोए...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss27"
+            android:label="27- नारद जी के कहे वचन का...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss28"
+            android:label="28- जंगल के मां बणा आश्रम...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss29"
+            android:label="29-एक महूर्त पिछै करण ने खुद...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss30"
+            android:label="30-पाछै—पाछै होली ध्यान में लगी...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss31"
+            android:label="31- ईश्वर का कर ध्यान लखूंगी...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss32"
+            android:label="32-अपणे जीवित पति के सिवा...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss33"
+            android:label="33- हाथ जोड कै धर्मराज से...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss34"
+            android:label="34- तेरे सास ससुर के धर्म कर्म...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss35"
+            android:label="35- सब बातां की मौज होज्या जै...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ss36"
+            android:label="36-सब के घर मैं थारी दया तै...."
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".ssk"
+            android:label="कथासार"
+            android:parentActivityName=".sataywan" />
+        <activity
+            android:name=".puranmal"
+            android:label="2— पूर्णमल" />
+        <activity
+            android:name=".ppk"
+            android:label="कथासार" />
+        <activity
+            android:name=".pp1"
+            android:label="1- मत ले शादी का नाम पिता...." />
+        <activity
+            android:name=".pp2"
+            android:label="2- विष्णु कहण लगे ब्रहमा से...." />
+        <activity
+            android:name=".pp3"
+            android:label="3- तज गये मेर संसार की...." />
+        <activity
+            android:name=".pp4"
+            android:label="4- पिता के हुक्म से शवयम्भू...." />
+        <activity
+            android:name=".pp5"
+            android:label="5- मनुष्य जन्म लेकर कै.... " />
+        <activity
+            android:name=".pp6"
+            android:label="6- बिघन की खिडकी खोलै मतना.... " />
+        <activity
+            android:name=".pp7"
+            android:label="7- खड़या हुआ घणी देर का...." />
+        <activity
+            android:name=".pp8"
+            android:label="8- बेटे की सुण भाजी आई...." />
+        <activity
+            android:name=".pp9"
+            android:label="9- तेरा पूर्ण पूत खडा जड में...." />
+        <activity
+            android:name=".pp10"
+            android:label="10- तेरा क्यूकर खोट बतादूंग्या...." />
+        <activity
+            android:name=".pp11"
+            android:label="11- मां बेटे पै जुल्म करै...." />
+        <activity
+            android:name=".pp12"
+            android:label="12- आत्मा नहीं सताया करते...." />
+        <activity
+            android:name=".pp13"
+            android:label="13- आ खेल घड़ी दो-चार...." />
+        <activity
+            android:name=".pp14"
+            android:label="14- मैं हूर परी, के उमर मेरी...." />
+        <activity
+            android:name=".pp15"
+            android:label="15- क्यू दिल के अन्दर भूल...." />
+        <activity
+            android:name=".pp16"
+            android:label="16- किस नै मात कहै सै...." />
+        <activity
+            android:name=".pp17"
+            android:label="17- पूर्णमल तू कुणसे ढंग म्य...." />
+        <activity
+            android:name=".pp18"
+            android:label="18- जिसकी कूख से जन्म लिया...." />
+        <activity
+            android:name=".pp19"
+            android:label="19- देखकै पूर्णमल की श्यान...." />
+        <activity
+            android:name=".pp20"
+            android:label="20- मेरे जिगर मैं खटकै सै...." />
+        <activity
+            android:name=".pp21"
+            android:label="21- मौसी थर-थर कापैं तेरा ...." />
+        <activity
+            android:name=".pp22"
+            android:label="22- मौसी आगै बेटा-बेटी...." />
+        <activity
+            android:name=".pp23"
+            android:label="23- तू कहरी पूर्णमल, ...." />
+        <activity
+            android:name=".pp24"
+            android:label="24- पूर्णमल तू सूणता जाईये...." />
+        <activity
+            android:name=".pp25"
+            android:label="25- तेरे बोलां की मेरी छाती ...." />
+        <activity
+            android:name=".pp26"
+            android:label="26- पूर्णमल तेरे खून म्य...." />
+        <activity
+            android:name=".pp27"
+            android:label="27- मैं तेरे हंस-हंस करल्यूं लाड...." />
+        <activity
+            android:name=".pp28"
+            android:label="28- हे! बेईमान तेरे फन्दे म्य...." />
+        <activity
+            android:name=".pp30"
+            android:label="30- म्हारा-तेरा ना बोलण का ...." />
+        <activity
+            android:name=".pp31"
+            android:label="31- किसनै कही कसूती बात...." />
+        <activity
+            android:name=".pp32"
+            android:label="32- खोलकै बता दे गौरी...." />
+        <activity
+            android:name=".pp33"
+            android:label="33- उठ क्यू तलै पड़ी मेरी ...." />
+        <activity
+            android:name=".pp34"
+            android:label="34- तेरे पूर्णमल बदकार नै...." />
+        <activity
+            android:name=".pp35"
+            android:label="35- तेरे पूर्णमल बदकार नै...." />
+        <activity
+            android:name=".pp36"
+            android:label="36- कर बन्द जबान रै...." />
+        <activity
+            android:name=".pp37"
+            android:label="37- पिया मेरे जिसनै भगत ...." />
+        <activity
+            android:name=".pp38"
+            android:label="38- भनक पड़ी थी कानां के म्हा...." />
+        <activity
+            android:name=".pp39"
+            android:label="39- तनै रोक लिया, क्यों टोक ...." />
+        <activity
+            android:name=".pp40"
+            android:label="40- जै नही यकीदा हो तेरै...." />
+        <activity
+            android:name=".pp41"
+            android:label="41- अपणी अकल पास म्य ...." />
+        <activity
+            android:name=".pp42"
+            android:label="42- लज्जा करकै बुझण लाग्या...." />
+        <activity
+            android:name=".pp43"
+            android:label="43- राम जाणता मां बेटे म्य...." />
+        <activity
+            android:name=".pp44"
+            android:label="44- पूर्णमल बेटे की पिया...." />
+        <activity
+            android:name=".pp45"
+            android:label="45- बांझ दोष की बीर नै...." />
+        <activity
+            android:name=".pp46"
+            android:label="46- करकै दया छोड दयूं सूत नै...." />
+        <activity
+            android:name=".pp47"
+            android:label="47- पूर्णमल के बारे म्य...." />
+        <activity
+            android:name=".pp48"
+            android:label="48- री ! मरणदे जननी...." />
+        <activity
+            android:name=".pp49"
+            android:label="49- तीन लाख के बदले मैं...." />
+        <activity
+            android:name=".pp50"
+            android:label="50- बस रै राणी मेरे हुक्म मैं...." />
+        <activity
+            android:name=".pp29"
+            android:label="29- पूर्णमल के बारे म्य...." />
+        <activity
+            android:name=".Naldamyanti"
+            android:label="3— नल—दमयन्ती" />
+        <activity android:name=".contectus" />
+        <activity
+            android:name=".pp51"
+            android:label="51- मेरी सौंकण का कहया...." />
+        <activity
+            android:name=".pp52"
+            android:label="52- डूब गया क्यूं पिता पूत...." />
+        <activity
+            android:name=".pp53"
+            android:label="53- रूपेशाह पूर्ण के मरण म्य...." />
+        <activity
+            android:name=".pp54"
+            android:label="54- जो कहदी थी रंग महल...." />
+        <activity
+            android:name=".pp55"
+            android:label="55- पूर्णमल मैं जांगी स्वर्ग...." />
+        <activity
+            android:name=".pp56"
+            android:label="56- जो विधना नै लेख लिख्या...." />
+        <activity
+            android:name=".pp57"
+            android:label="57- कर्मगति का के बेरा कद...." />
+        <activity
+            android:name=".pp58"
+            android:label="58- जल्लादों नै अपणे तेगे...." />
+        <activity
+            android:name=".nd1"
+            android:label="1-समझ ना सकते जगत के मन.... " />
+        <activity
+            android:name=".nd2"
+            android:label="2-कंवल से नैना नाक सुवां सा.... " />
+        <activity
+            android:name=".nd3"
+            android:label="3-राजा नल नै जंगल मैं एक.... " />
+        <activity
+            android:name=".nd4"
+            android:label="4- राजा नल मारिये मत जै...." />
+        <activity
+            android:name=".nd5"
+            android:label="5-आओ रै हंसों विदर्भ देश.... " />
+        <activity
+            android:name=".nd6"
+            android:label="6-स्वर्ग केसा आन्नद म्हारे बाग...." />
+        <activity
+            android:name=".nd7"
+            android:label="7-वैं मारैंगे हंसा नै तै जिनके ह्रदय...." />
+        <activity
+            android:name=".nd8"
+            android:label="8-जाईये रे हंसो राजा नल...." />
+        <activity
+            android:name=".nd9"
+            android:label="9-बेरा ना कद पार होऊंगी पिया.... " />
+        <activity
+            android:name=".nd10"
+            android:label="10-दमयन्ती कुन्द रहण लागगी...." />
+        <activity android:name=".ndk" />
+        <activity
+            android:name=".nd11"
+            android:label="11- भीमसैन नै रचा स्वंयबर राजाओं...." />
+        <activity
+            android:name=".nd12"
+            android:label="12- रोका नही टोका नल पहुंचग्या.... " />
+        <activity
+            android:name=".nd13"
+            android:label="13-सहम गई दमयन्ती  जाणूं कोए...." />
+        <activity
+            android:name=".nd14"
+            android:label="14- राजा नल नै रस्ते में देवता.... " />
+        <activity
+            android:name=".nd15"
+            android:label="15- देवताओं ने तुझको चाहया...." />
+        <activity
+            android:name=".nd16"
+            android:label="16-दमयन्ती नै श्रदा करकै .... " />
+        <activity
+            android:name=".nd17"
+            android:label="17-देवताओं नै त्याग कै प्यारी .... " />
+        <activity
+            android:name=".nd18"
+            android:label="18-लग्न महूर्त शुभ दिन आया...." />
+        <activity
+            android:name=".nd19"
+            android:label="19- दमयन्ती झुकावण लागी देवतां...." />
+        <activity
+            android:name=".nd20"
+            android:label="20-दमयन्ती नै धरा प्रेम से .... " />
+        <activity
+            android:name=".nd22"
+            android:label="22-तुम गाओ मंगलाचार...." />
+        <activity
+            android:name=".nd21"
+            android:label="21- लज्जा सहित पकड़कै वस्त्र डाल.... " />
+        <activity
+            android:name=".nd23"
+            android:label="23-रूपवान गुणवान तेजस्वी नल.... " />
+        <activity
+            android:name=".nd24"
+            android:label="24-इतनी सुनकै राजा नल...." />
+        <activity
+            android:name=".nd25"
+            android:label="25- मेरे साजन नै खेलण का चा...." />
+        <activity
+            android:name=".nd26"
+            android:label="26-जरा खेल बंद करके सुणों.... " />
+        <activity
+            android:name=".nd27"
+            android:label="27-आदर करकै पास बिठाले.... " />
+        <activity
+            android:name=".nd28"
+            android:label="28- धन हारण की सुण कै...." />
+        <activity
+            android:name=".nd29"
+            android:label="29- चले बाहण और भाई दोनूं साथ...." />
+        <activity
+            android:name=".nd30"
+            android:label="30-सुण इन्द्रसैन बेटा मेरे ..... " />
+        <activity
+            android:name=".nd31"
+            android:label="31- हिया पाट कै आवण लाग्या.... " />
+        <activity
+            android:name=".nd32"
+            android:label="32- भुखे मरत्यां नै हो लिये...." />
+        <activity
+            android:name=".nd33"
+            android:label="33-कदे प्रजा झुकै थी मैरे...." />
+        <activity
+            android:name=".nd34"
+            android:label="34-गगन मै चढकै कलयुग.... " />
+        <activity
+            android:name=".nd35"
+            android:label="35-भूख प्यास नै चौगरदे तैं...." />
+        <activity
+            android:name=".nd36"
+            android:label="36-सोच लई के पिया जी...." />
+        <activity
+            android:name=".nd37"
+            android:label="37-एकले नै क्यूरकर छोडूं...." />
+        <activity
+            android:name=".nd38"
+            android:label="38- शर्म आवैगी घणी कैसे चलूं...." />
+        <activity
+            android:name=".nd39"
+            android:label="39-राजा राणी करते जाते दर्द.... " />
+        <activity
+            android:name=".nd40"
+            android:label="40-राजा नल की ऐश अमीरी लूटी...." />
+        <activity
+            android:name=".nd41"
+            android:label="41-बुद्धि मै अन्धेर पड़ा था...." />
+        <activity
+            android:name=".nd42"
+            android:label="42- छोड चलो हर भली करैंगे ...." />
+        <activity
+            android:name=".nd43"
+            android:label="43-तेरा बिछड़ चला भरतार....   " />
+        <activity
+            android:name=".nd44"
+            android:label="44- न्यारे-२ पाट चले हम आए.... " />
+        <activity
+            android:name=".nd45"
+            android:label="45- सूती उठकै देखण लागी...." />
+        <activity
+            android:name=".nd46"
+            android:label="46- सहज में खुड़का सुन लूंगी.... " />
+        <activity
+            android:name=".nd47"
+            android:label="47-इस बणखण्ड मैं दीखै सै मनै.... " />
+        <activity android:name=".RajaHarishchander" />
+        <activity
+            android:name=".rhk"
+            android:label="कथासार :—" />
+        <activity
+            android:name=".rh1"
+            android:label="1-रहया ताकत लाकै देख...." />
+        <activity
+            android:name=".rh2"
+            android:label="2-नीर की हे! नीर की...." />
+        <activity
+            android:name=".rh3"
+            android:label="3-कदे-कदे रंग महल .... " />
+        <activity
+            android:name=".rh4"
+            android:label="4-दया करी हर नै .... " />
+        <activity
+            android:name=".rh5"
+            android:label="5-तनै जात जन्म सब खो ...." />
+        <activity
+            android:name=".rh6"
+            android:label="6-जाणू था एक शरीर...." />
+        <activity
+            android:name=".rh7"
+            android:label="7-हो जल मै गोता मार ...." />
+        <activity
+            android:name=".rh8"
+            android:label="8-सिर कै ऊपर मटका ठा ...." />
+        <activity
+            android:name=".rh9"
+            android:label="9-ऋषि मै नौकर काले.... " />
+        <activity
+            android:name=".rh10"
+            android:label="10- कालिये मतन्या रड़का ...." />
+        <activity
+            android:name=".rh11"
+            android:label="11-रस्ता तेरी दुकान का...." />
+        <activity
+            android:name=".rh12"
+            android:label="12-पालै सै तै कदे नै कदे...." />
+        <activity
+            android:name=".rh13"
+            android:label="13-धर्म समझकै चल दिया लड़का.... " />
+        <activity
+            android:name=".rh14"
+            android:label="14-मैं तेरा भूलूं नही एहसान.... " />
+        <activity
+            android:name=".rh15"
+            android:label="15-कोई हो बेवारिस नारी...." />
+        <activity
+            android:name=".rh16"
+            android:label="16-और किसे का दोष नही...." />
+        <activity
+            android:name=".rh17"
+            android:label="17-एकली रूधन करै तेरी...." />
+        <activity
+            android:name=".rh18"
+            android:label="18-रोहताश आश की, लाश...." />
+        <activity
+            android:name=".rh19"
+            android:label="19-नैनां म्य तै आसू पड़तें...." />
+        <activity
+            android:name=".rh20"
+            android:label="20-मेरे छुटगे सब आनन्द...." />
+        <activity
+            android:name=".rh21"
+            android:label="21- चल्या माली रै, बोल ...." />
+        <activity
+            android:name=".rh22"
+            android:label="22-दुखयारी का रौला सुणकै...." />
+        <activity
+            android:name=".rh23"
+            android:label="23-मैं के उजाड़ूं तेरे बाग ...." />
+        <activity
+            android:name=".rh24"
+            android:label="24-अरे! मुशिकल हो सै .... " />
+        <activity
+            android:name=".rh25"
+            android:label="25-तबीयत मानै तेरी...." />
+        <activity
+            android:name=".rh26"
+            android:label="26-तामस अहंकार की काया...." />
+        <activity
+            android:name=".rh27"
+            android:label="27-माली के नै बांधी थी ठाड.... " />
+        <activity
+            android:name=".rh28"
+            android:label="28-बोई काट लई रे! माली...." />
+        <activity
+            android:name=".rh29"
+            android:label="29-री! मत रोवै दुखिया...." />
+        <activity
+            android:name=".rh30"
+            android:label="30-ठाली गोदी मै लाश ठाढ ....." />
+        <activity
+            android:name=".rh31"
+            android:label="31-माटी के म्हा माटी मिलगी...." />
+        <activity
+            android:name=".rh32"
+            android:label="32-के मेरा बेटा मरण जोग ...." />
+        <activity
+            android:name=".rh33"
+            android:label="33-केला तोड़कै अर्थी तुर्त ...." />
+        <activity
+            android:name=".rh34"
+            android:label="34-पहलम चोट नदी मै न्हा ...." />
+        <activity
+            android:name=".rh35"
+            android:label="35-साजन हो तनै नही पिछाणी...." />
+        <activity
+            android:name=".rh36"
+            android:label="36-रोवणं की तै तेरै भूल ...." />
+        <activity
+            android:name=".rh37"
+            android:label="37-क्यूं भरमावै सै डाणं...." />
+        <activity
+            android:name=".rh38"
+            android:label="38-आप घाट की मालिक बणगी...." />
+        <activity
+            android:name=".rh39"
+            android:label="39-व्याकुल सै मेरा गात पति ...." />
+        <activity
+            android:name=".rh40"
+            android:label="40-साजन हो क्यों बोलै, ...." />
+        <activity
+            android:name=".rh41"
+            android:label="41-राणी मेरे भी उठैं झाल...." />
+        <activity
+            android:name=".rh42"
+            android:label="42-बेटे आळा किला टूटग्याे ...." />
+        <activity
+            android:name=".rh43"
+            android:label="43-लिये थाम हाथ मै काले...." />
+        <activity
+            android:name=".rh44"
+            android:label="44-के बूझै सै काले, तेरे ...." />
+        <activity
+            android:name=".rh45"
+            android:label="45-ले लिया सिर का चीर...." />
+    </application>
+
+</manifest>
