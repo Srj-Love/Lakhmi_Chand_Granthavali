@@ -140,9 +140,9 @@ class MainActivity : AppCompatActivity() {
     private fun insertData(): MutableList<SongDataModel> {
 
         songList.forEach {
-            mDataModelList.add(
+           /* mDataModelList.add(
                     SongDataModel(it.key, it.value, it.value))
-            )
+            )*/
         }
         return mDataModelList
     }
