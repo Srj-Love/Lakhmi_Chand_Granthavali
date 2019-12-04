@@ -1,7 +1,7 @@
 package com.jks.android.myapplication;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -54,75 +54,48 @@ public class sataywan extends AppCompatActivity {
         Button button37=(Button)findViewById(R.id.ssk);
 
 
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(sataywan.this,ss1.class);
-                startActivity(intent);
-            }
+        button1.setOnClickListener(v -> {
+            Intent intent=new Intent(sataywan.this,ss1.class);
+            startActivity(intent);
         });
 
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(sataywan.this,ss2.class);
-                startActivity(intent);
-            }
+        button2.setOnClickListener(v -> {
+            Intent intent=new Intent(sataywan.this,ss2.class);
+            startActivity(intent);
         });
 
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(sataywan.this,ss3.class);
-                startActivity(intent);
-            }
+        button3.setOnClickListener(v -> {
+            Intent intent=new Intent(sataywan.this,ss3.class);
+            startActivity(intent);
         });
-        button4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(sataywan.this,ss4.class);
-                startActivity(intent);
-            }
+        button4.setOnClickListener(v -> {
+            Intent intent=new Intent(sataywan.this,ss4.class);
+            startActivity(intent);
         });
 
-        button5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(sataywan.this,ss5.class);
-                startActivity(intent);
-            }
+        button5.setOnClickListener(v -> {
+            Intent intent=new Intent(sataywan.this,ss5.class);
+            startActivity(intent);
         });
 
-        button6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(sataywan.this,ss6.class);
-                startActivity(intent);
-            }
+        button6.setOnClickListener(v -> {
+            Intent intent=new Intent(sataywan.this,ss6.class);
+            startActivity(intent);
         });
 
-        button7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(sataywan.this,ss7.class);
-                startActivity(intent);
-            }
+        button7.setOnClickListener(v -> {
+            Intent intent=new Intent(sataywan.this,ss7.class);
+            startActivity(intent);
         });
 
-        button8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(sataywan.this,ss8.class);
-                startActivity(intent);
-            }
+        button8.setOnClickListener(v -> {
+            Intent intent=new Intent(sataywan.this,ss8.class);
+            startActivity(intent);
         });
 
-        button9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(sataywan.this,ss9.class);
-                startActivity(intent);
-            }
+        button9.setOnClickListener(v -> {
+            Intent intent=new Intent(sataywan.this,ss9.class);
+            startActivity(intent);
         });
 
         button10.setOnClickListener(new View.OnClickListener() {

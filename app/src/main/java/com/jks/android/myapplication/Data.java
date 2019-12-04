@@ -1,10 +1,9 @@
 package com.jks.android.myapplication;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.view.MenuItem;
-import android.view.View;
 import android.webkit.WebView;
 
 public class Data extends AppCompatActivity {
