@@ -65,7 +65,6 @@ public class saang extends AppCompatActivity implements SongAdapter.SongClickLis
 
         return mList;
     }
-
     @Override
     public void onClick(int pos) {
 

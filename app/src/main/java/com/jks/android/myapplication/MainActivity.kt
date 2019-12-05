@@ -7,14 +7,17 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.firestore.DocumentReference
+import com.google.common.reflect.TypeToken
 import com.google.firebase.firestore.FirebaseFirestore
-import com.jks.android.myapplication.model.ChildSongModel
-import com.jks.android.myapplication.model.DataModel
+import com.google.gson.GsonBuilder
+import com.google.gson.stream.JsonReader
+import com.jks.android.myapplication.model.JsonDataModel
 import com.jks.android.myapplication.model.SongDataModel
-import java.util.*
-import kotlin.collections.HashMap
+import java.io.IOException
+import java.io.InputStream
+import java.io.StringReader
+import java.nio.charset.Charset
+
 
 class MainActivity : AppCompatActivity() {
     val TAG = MainActivity::class.java.simpleName
@@ -95,16 +98,51 @@ class MainActivity : AppCompatActivity() {
 
 //        getQueryData(db)
 
-        val mList = insertData()
+//        val mList = insertData()
 // Create a new user with a first and last name
 
+        val jsonString = getAssetsJSON("Data.json")
+        /* val gson = Gson()
+         val weatherList: List<JsonDataModel> = gson.fromJson(jsonString, Array<JsonDataModel>::class.java).toList()
+ */
 
-        mList.forEach {
+        val groupListType = object : TypeToken<ArrayList<JsonDataModel.Data>>() {}.type
+
+
+        val gson = GsonBuilder().create()
+        val modelDataList: List<JsonDataModel.Data> = gson.fromJson(jsonString, groupListType)
+
+
+        modelDataList.forEach {
+            //            println(it.dATA?.get(0)?.name)
+            println(it.name)
+
+           /* // Add a new document with a generated ID
+            val docId = db.collection("Songs")
+                    .document().id
+            Log.d(TAG, "Doc ID: $docId")
+
+            db.collection("Songs")
+                    .document(docId)
+                    .set(it)
+                    .addOnSuccessListener { documentReference ->
+
+                        Log.d(TAG, "DocumentSnapshot added with ID: $documentReference")
+                    }
+                    .addOnFailureListener { e ->
+                        Log.w(TAG, "Error adding document", e)
+                    }*/
+        }
+
+
+        /*mList.forEach {
 
             // Add a new document with a generated ID
             val docId = db.collection("Songs")
                     .document().id
             Log.d(TAG, "Doc ID: $docId")
+
+
 
 
 
@@ -118,7 +156,7 @@ class MainActivity : AppCompatActivity() {
                     .addOnFailureListener { e ->
                         Log.w(TAG, "Error adding document", e)
                     }
-        }
+        }*/
 
 
         button1.setOnClickListener {
@@ -140,9 +178,9 @@ class MainActivity : AppCompatActivity() {
     private fun insertData(): MutableList<SongDataModel> {
 
         songList.forEach {
-           /* mDataModelList.add(
-                    SongDataModel(it.key, it.value, it.value))
-            )*/
+            /* mDataModelList.add(
+                     SongDataModel(it.key, it.value, it.value))
+             )*/
         }
         return mDataModelList
     }
@@ -171,5 +209,35 @@ class MainActivity : AppCompatActivity() {
                 .addOnFailureListener { exception ->
                     Log.d(TAG, "Error getting documents: ", exception)
                 }
+    }
+
+    fun getWeatherObjectFromJson(jsonStr: String): List<JsonDataModel> {
+
+        var stringReader: StringReader = StringReader(jsonStr)
+        var jsonReader: JsonReader = JsonReader(stringReader)
+
+        val gsonBuilder = GsonBuilder().serializeNulls()
+        gsonBuilder.registerTypeAdapter(JsonDataModel::class.java, JsonDataModel())
+        val gson = gsonBuilder.create()
+
+        val weatherList: List<JsonDataModel> = gson.fromJson(stringReader, Array<JsonDataModel>::class.java).toList()
+
+        return weatherList
+    }
+
+    /* Get File in Assets Folder */
+    fun getAssetsJSON(fileName: String?): String? {
+        var json: String? = null
+        try {
+            val inputStream: InputStream = this.assets.open(fileName)
+            val size: Int = inputStream.available()
+            val buffer = ByteArray(size)
+            inputStream.read(buffer)
+            inputStream.close()
+            json = String(buffer, Charset.defaultCharset())
+        } catch (e: IOException) {
+            e.printStackTrace()
+        }
+        return json
     }
 }

@@ -1,10 +1,13 @@
 package com.jks.android.myapplication;
 
 import android.content.Intent;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.ArrayList;
 
 public class Chapsingh extends AppCompatActivity {
 
@@ -63,6 +66,7 @@ public class Chapsingh extends AppCompatActivity {
         final Button button48 = (Button) findViewById(R.id.cs47);
         final Button button49 = (Button) findViewById(R.id.cs48);
         final Button button50 = (Button) findViewById(R.id.cs49);
+
 
 
         button1.setOnClickListener(new View.OnClickListener() {
@@ -469,5 +473,5 @@ public class Chapsingh extends AppCompatActivity {
         });
 
     }
-    }
+}
 
