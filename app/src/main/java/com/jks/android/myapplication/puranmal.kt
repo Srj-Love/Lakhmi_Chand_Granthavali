@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import java.util.*
 
 class puranmal : AppCompatActivity() {
     private val button: Button? = null
@@ -76,6 +75,72 @@ class puranmal : AppCompatActivity() {
         val button62 = findViewById<View>(R.id.pp61) as Button
 
 
+        arrayListOf(
+                button1.text.toString(),
+                        button2.text.toString(),
+                        button3.text.toString(),
+                        button4.text.toString(),
+                        button5.text.toString(),
+                        button6.text.toString(),
+                        button7.text.toString(),
+                        button8.text.toString(),
+                        button9.text.toString(),
+                        button10.text.toString(),
+                        button11.text.toString(),
+                        button12.text.toString(),
+                        button13.text.toString(),
+                        button14.text.toString(),
+                        button15.text.toString(),
+                        button16.text.toString(),
+                        button17.text.toString(),
+                        button18.text.toString(),
+                        button19.text.toString(),
+                        button20.text.toString(),
+                        button21.text.toString(),
+                        button22.text.toString(),
+                        button23.text.toString(),
+                        button24.text.toString(),
+                        button25.text.toString(),
+                        button26.text.toString(),
+                        button27.text.toString(),
+                        button28.text.toString(),
+                        button29.text.toString(),
+                        button30.text.toString(),
+                        button31.text.toString(),
+                        button32.text.toString(),
+                        button33.text.toString(),
+                        button34.text.toString(),
+                        button35.text.toString(),
+                        button36.text.toString(),
+                        button37.text.toString(),
+                        button38.text.toString(),
+                        button39.text.toString(),
+                        button40.text.toString(),
+                        button41.text.toString(),
+                        button42.text.toString(),
+                        button43.text.toString(),
+                        button44.text.toString(),
+                        button45.text.toString(),
+                        button46.text.toString(),
+                        button47.text.toString(),
+                        button48.text.toString(),
+                        button49.text.toString(),
+                        button50.text.toString(),
+                        button51.text.toString(),
+                        button52.text.toString(),
+                        button53.text.toString(),
+                        button54.text.toString(),
+                        button55.text.toString(),
+                        button56.text.toString(),
+                        button57.text.toString(),
+                        button58.text.toString(),
+                        button59.text.toString(),
+                        button60.text.toString(),
+                        button61.text.toString(),
+                        button62.text.toString()
+        ).forEach {
+            println(it)
+        }
 
 
         button1.setOnClickListener {

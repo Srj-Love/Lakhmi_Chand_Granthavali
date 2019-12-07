@@ -2,6 +2,7 @@
     <string name="app_name">पंडित लख्मीचंद ग्रंथावाली </string>
 
     <string name="main_url">file:///android_asset/Parichaya.html</string>
+    <string name="add_to_favorites">Add to Favorites</string>
 
     <string-array name="song_list">
         "1— सत्यवान सावित्री",
@@ -10,7 +11,7 @@
         "4— राजा—हरिश्चन्द्र",
         "5— चापसिंह",
         "6— सेठ- ताराचंद",
-        "7—चन्द्रगुप्त  धर्ममालकी ",
+        "7—चन्द्रगुप्त धर्ममालकी ",
         "8— शाही — लकडहारा",
         "9— मीरा बाई",
         "10— महाभारत (चीर पर्व)",

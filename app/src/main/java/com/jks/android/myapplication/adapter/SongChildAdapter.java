@@ -1,31 +1,31 @@
 package com.jks.android.myapplication.adapter;
 
 import android.content.Context;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.jks.android.myapplication.R;
 import com.jks.android.myapplication.model.JsonDataModel;
-import com.jks.android.myapplication.model.SongModel;
 
 import java.util.ArrayList;
 
-public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder> {
+public class SongChildAdapter extends RecyclerView.Adapter<SongChildAdapter.SongViewHolder> {
 
-    ArrayList<JsonDataModel.Data> list;
+    ArrayList<JsonDataModel.DataStoryList> list;
 
     Context context;
     SongClickListener mListener;
 
    public interface SongClickListener {
-        void onClick(int pos);
+        void onSubClick(int pos);
     }
 
-    public SongAdapter(ArrayList<JsonDataModel.Data> list, Context context, SongClickListener mListener) {
+    public SongChildAdapter(ArrayList<JsonDataModel.DataStoryList> list, Context context, SongClickListener mListener) {
         this.list = list;
         this.context = context;
         this.mListener = mListener;
@@ -55,11 +55,11 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
     @Override
     public void onBindViewHolder(final SongViewHolder viewHolder, final int position) {
 
-        JsonDataModel.Data model = list.get(viewHolder.getAdapterPosition());
+        JsonDataModel.DataStoryList model = list.get(viewHolder.getAdapterPosition());
 
         viewHolder.btn_sang_item.setText(model.getName());
         viewHolder.btn_sang_item.setOnClickListener(v -> {
-            mListener.onClick(model.getId());
+            mListener.onSubClick(model.getId());
         });
 
     }

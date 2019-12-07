@@ -9,9 +9,9 @@ class JsonDataModel {
 
     @SerializedName("DATA")
     @Expose
-    private var dataList: MutableList<Data?>? = null
+    var dataList: MutableList<Data?>? = null
 
-    inner class Data {
+    class Data {
 
         @SerializedName("id")
         @Expose
@@ -24,8 +24,11 @@ class JsonDataModel {
         var dataList: List<DataStoryList>? = null
     }
 
-    inner class DataStoryList {
+    class DataStoryList {
 
+        @SerializedName("id")
+        @Expose
+        var id: Int? = 0
         @SerializedName("name")
         @Expose
         var name: String? = null

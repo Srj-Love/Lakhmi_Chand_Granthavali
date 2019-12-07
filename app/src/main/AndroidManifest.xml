@@ -711,6 +711,8 @@
         <activity
             android:name=".rh45"
             android:label="45-ले लिया सिर का चीर...." />
+        <activity android:name=".ui.SubChildActivity" />
+        <activity android:name=".ui.StoryActivity" />
     </application>
 
 </manifest>
