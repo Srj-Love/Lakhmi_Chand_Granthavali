@@ -86,7 +86,7 @@ class chnder : AppCompatActivity() {
         val button101 = findViewById<View>(R.id.st100) as Button
         val button102 = findViewById<View>(R.id.st101) as Button
 
-        arrayListOf(
+        /*arrayListOf(
                 button28.text.toString(),
                 button29.text.toString(),
                 button30.text.toString(),
@@ -164,7 +164,8 @@ class chnder : AppCompatActivity() {
                 button102.text.toString()
         ).forEach {
             println(it)
-        }
+        }*/
+
         button28.setOnClickListener {
             val intent = Intent(this@chnder, datacg::class.java).putExtra("id", "st27")
             startActivity(intent)

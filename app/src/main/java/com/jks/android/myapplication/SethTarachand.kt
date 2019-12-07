@@ -38,37 +38,6 @@ class SethTarachand : AppCompatActivity() {
         val button26 = findViewById<View>(R.id.st25) as Button
         val button27 = findViewById<View>(R.id.st26) as Button
 
-        arrayListOf(
-                button1.text.toString(),
-                button2.text.toString(),
-                button3.text.toString(),
-                button4.text.toString(),
-                button5.text.toString(),
-                button6.text.toString(),
-                button7.text.toString(),
-                button8.text.toString(),
-                button9.text.toString(),
-                button10.text.toString(),
-                button11.text.toString(),
-                button12.text.toString(),
-                button13.text.toString(),
-                button14.text.toString(),
-                button15.text.toString(),
-                button16.text.toString(),
-                button17.text.toString(),
-                button18.text.toString(),
-                button19.text.toString(),
-                button20.text.toString(),
-                button21.text.toString(),
-                button22.text.toString(),
-                button23.text.toString(),
-                button24.text.toString(),
-                button25.text.toString(),
-                button26.text.toString(),
-                button27.text.toString()
-        ).forEach {
-            println(it)
-        }
 
 
 
