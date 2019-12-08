@@ -26,6 +26,11 @@ class SubChildActivity : AppCompatActivity(), SongChildAdapter.SongClickListener
     lateinit var recyclerView: RecyclerView
     lateinit var mdataModel: JsonDataModel.Data
 
+    var id: Int = 0
+    lateinit var name: String
+    private var isBookmark: Boolean = false
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_saang)
@@ -33,8 +38,14 @@ class SubChildActivity : AppCompatActivity(), SongChildAdapter.SongClickListener
 
         if (supportActionBar != null) supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
+        if (intent.hasExtra(Constants.BOOkMARK)) {
+            isBookmark = intent.getBooleanExtra(Constants.BOOkMARK, false)
+        }
+
         if (intent.hasExtra(Constants.SUB_ID) && intent.hasExtra(Constants.EXTRA)) {
             val mStringData = intent.getStringExtra(Constants.EXTRA)
+            id = intent.getIntExtra(Constants.ID, 0)
+            name = intent.getStringExtra(Constants.NAME)
 
             val groupListType = object : TypeToken<JsonDataModel.Data>() {}.type
             val gson = GsonBuilder().create()
@@ -122,9 +133,14 @@ class SubChildActivity : AppCompatActivity(), SongChildAdapter.SongClickListener
 
     override fun onSubClick(pos: Int) {
         val model = mdataModel.dataList?.get(pos)
-        val intent = Intent(this@SubChildActivity, StoryActivity::class.java)
-        intent.putExtra(Constants.SUB_ID, model!!.id)
-        intent.putExtra(Constants.STORY, model.story ?: "-")
+        val intent = Intent(this@SubChildActivity, StoryActivity::class.java).apply {
+            putExtra(Constants.ID, id)
+            putExtra(Constants.NAME, name)
+            putExtra(Constants.SUB_ID, model!!.id)
+            putExtra(Constants.SUB_NAME, model.name)
+            putExtra(Constants.STORY, model.story ?: "-")
+            intent.putExtra(Constants.BOOkMARK, isBookmark)
+        }
 
         startActivity(intent)
 

@@ -59,7 +59,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
 
         viewHolder.btn_sang_item.setText(model.getName());
         viewHolder.btn_sang_item.setOnClickListener(v -> {
-            mListener.onClick(model.getId());
+            mListener.onClick(viewHolder.getAdapterPosition());
         });
 
     }

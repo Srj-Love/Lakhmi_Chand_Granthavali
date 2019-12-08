@@ -13,6 +13,8 @@ import com.google.gson.GsonBuilder
 import com.google.gson.stream.JsonReader
 import com.jks.android.myapplication.model.JsonDataModel
 import com.jks.android.myapplication.model.SongDataModel
+import com.jks.android.myapplication.utils.Constants
+import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
 import java.io.InputStream
 import java.io.StringReader
@@ -22,8 +24,6 @@ import java.nio.charset.Charset
 class MainActivity : AppCompatActivity() {
     val TAG = MainActivity::class.java.simpleName
     lateinit var mDataModelList: MutableList<SongDataModel>
-
-
 
 
     private val button: Button? = null
@@ -83,6 +83,14 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, contectus::class.java)
             startActivity(intent)
         }
+
+        btn_bkmrk.setOnClickListener {
+            Intent(this@MainActivity, saang::class.java).apply {
+                putExtra(Constants.BOOkMARK, true)
+                startActivity(this)
+            }
+
+        }
         val textView = findViewById<TextView>(R.id.textView)
         textView.isSelected = true
     }
@@ -97,12 +105,18 @@ class MainActivity : AppCompatActivity() {
 
         modelDataList.forEach {
             //            println(it.dATA?.get(0)?.name)
-            println(it.name)
+            /*println(it.id.toString() + it.name)
+
+            it.dataList?.forEach { its ->
+                println(it.id.toString() + it.name + its.id.toString())
+
+            }*/
+
 
             // Add a new document with a generated ID
             val docId = db.collection("Songs")
                     .document().id
-            Log.d(TAG, "Doc ID: $docId")
+//              Log.d(TAG, "Doc ID: $docId")
 
             db.collection("Songs")
                     .document(docId)

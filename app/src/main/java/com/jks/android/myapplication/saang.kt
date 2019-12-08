@@ -13,6 +13,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.gson.JsonObject
 import com.jks.android.myapplication.adapter.SongAdapter
 import com.jks.android.myapplication.adapter.SongAdapter.SongClickListener
+import com.jks.android.myapplication.db.SqlDbHelper
 import com.jks.android.myapplication.model.JsonDataModel
 import com.jks.android.myapplication.ui.SubChildActivity
 import com.jks.android.myapplication.utils.Constants
@@ -21,8 +22,12 @@ import kotlinx.android.synthetic.main.activity_saang.*
 
 class saang : AppCompatActivity(), SongClickListener {
 
+    private var isBookmark: Boolean = false
     val TAG = saang::class.java.simpleName
 
+    val dbHelper: SqlDbHelper by lazy {
+        SqlDbHelper(this@saang)
+    }
 
     var mAdapter: SongAdapter? = null
     var mList: ArrayList<JsonDataModel.Data>? = null
@@ -35,6 +40,11 @@ class saang : AppCompatActivity(), SongClickListener {
         if (supportActionBar != null) supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         recyclerView = findViewById(R.id.rcv_song)
+
+        if (intent.hasExtra(Constants.BOOkMARK)) {
+            isBookmark = intent.getBooleanExtra(Constants.BOOkMARK, false)
+        }
+
         val db = FirebaseFirestore.getInstance()
 
 
@@ -44,7 +54,23 @@ class saang : AppCompatActivity(), SongClickListener {
         recyclerView.layoutManager = LinearLayoutManager(this@saang)
         recyclerView.addItemDecoration(DividerItemDecoration(this@saang, DividerItemDecoration.HORIZONTAL))
 
-        getQueryData(db)
+        if (isBookmark) {
+            getBookmarkData()
+        } else {
+            getQueryData(db)
+        }
+
+
+    }
+
+    private fun getBookmarkData() {
+        pb.visibility = View.GONE
+        mList?.clear()
+        mList = dbHelper.readAllData()
+
+        mAdapter = SongAdapter(mList, this@saang, this)
+        recyclerView.adapter = mAdapter
+
     }
 
     private val data: ArrayList<JsonDataModel.Data>
@@ -109,7 +135,10 @@ class saang : AppCompatActivity(), SongClickListener {
 
             val jsonData: JsonObject? = model?.let { convertToJson(it) }
             val intent = Intent(this@saang, SubChildActivity::class.java)
+            intent.putExtra(Constants.ID, model!!.id)
+            intent.putExtra(Constants.NAME, model.name)
             intent.putExtra(Constants.SUB_ID, pos)
+            intent.putExtra(Constants.BOOkMARK, isBookmark)
             intent.putExtra(Constants.EXTRA, jsonData.toString())
 
             startActivity(intent)

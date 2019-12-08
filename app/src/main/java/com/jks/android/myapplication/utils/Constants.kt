@@ -10,6 +10,23 @@ class Constants {
         const val SUB_NAME = "subname"
 
         const val STORY = "story"
+
         const val EXTRA = "extra"
+        const val BOOkMARK= "bookmark"
+
+        val WEBPAGE_HEADER = "<html>\n" +
+                "\n" +
+                "<head>\n" +
+                "    <meta charset=\"utf-8\"/><style>#D{text-decoration:none;    color:#0000FF;    position:fixed;    bottom:0px;}</style>\n" +
+                "\n" +
+                "    \n" +
+                "</head>\n" +
+                "\n" +
+                "\n" +
+                "<body bgcolor=\"#EBFFFF\"> <font size=\"3px\">\n"
+
+        val WEBPAGE_FOOTER = "</font>\n" +
+                "</body>"
+
     }
 }

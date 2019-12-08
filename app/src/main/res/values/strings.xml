@@ -3,6 +3,11 @@
 
     <string name="main_url">file:///android_asset/Parichaya.html</string>
     <string name="add_to_favorites">Add to Favorites</string>
+    <string name="remove_alert">क्या आप वाकई बुकमार्क से हटाना चाहते हैं?</string>
+    <string name="remove">निकालें</string>
+    <string name="cancel">रद्द करें</string>
+    <string name="bkmrk_added">बुकमार्क में सफलतापूर्वक जोड़ा गया</string>
+    <string name="bkmrk">बुकमार्क</string>
 
     <string-array name="song_list">
         "1— सत्यवान सावित्री",
