@@ -139,7 +139,7 @@ class SubChildActivity : AppCompatActivity(), SongChildAdapter.SongClickListener
             putExtra(Constants.SUB_ID, model!!.id)
             putExtra(Constants.SUB_NAME, model.name)
             putExtra(Constants.STORY, model.story ?: "-")
-            intent.putExtra(Constants.BOOkMARK, isBookmark)
+            putExtra(Constants.BOOkMARK, isBookmark)
         }
 
         startActivity(intent)

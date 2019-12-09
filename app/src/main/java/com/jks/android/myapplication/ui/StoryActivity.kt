@@ -2,6 +2,7 @@ package com.jks.android.myapplication.ui
 
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.view.Menu
@@ -18,6 +19,7 @@ import com.jks.android.myapplication.R
 import com.jks.android.myapplication.adapter.SongChildAdapter
 import com.jks.android.myapplication.db.SqlDbHelper
 import com.jks.android.myapplication.model.JsonDataModel
+import com.jks.android.myapplication.saang
 import com.jks.android.myapplication.utils.Constants
 import com.jks.android.myapplication.utils.Constants.Companion.WEBPAGE_FOOTER
 import com.jks.android.myapplication.utils.Constants.Companion.WEBPAGE_HEADER
@@ -79,8 +81,6 @@ class StoryActivity : AppCompatActivity() {
         web_story.isHapticFeedbackEnabled = false
 
         web_story.setOnLongClickListener {
-            // For final release of your app, comment the toast notification
-            Toast.makeText(this@StoryActivity, "लंबे क्लिक अक्षम", Toast.LENGTH_SHORT).show()
             true
         }
 
@@ -114,39 +114,48 @@ class StoryActivity : AppCompatActivity() {
             //item.setIcon(if (item.isChecked) R.drawable.ic_bookmark_filled else R.drawable.ic_bookmark_outline)
 
             // checki if user pressing the check or unchecked
-            if (item.icon == ContextCompat.getDrawable(this@StoryActivity, R.drawable.ic_bookmark_filled)) {
-                item!!.isChecked = !item.isChecked
-
+            if (isBookmark) {
+                alertBookmark(item)
             } else {
-                item!!.isChecked = !item.isChecked
-
+                addBookmark()
+                item.setIcon(R.drawable.ic_bookmark_filled)
             }
 
-            if (item.isChecked) {
+
+            /*if (item.isChecked) {
                 item.setIcon(R.drawable.ic_bookmark_filled)
                 addBookmark()
             } else if (!item.isChecked) {
                 if (isBookmark) {
-                    alertBookmark()
+                    alertBookmark(item)
                 } else {
                     addBookmark()
+                    item.setIcon(R.drawable.ic_bookmark_filled)
+
                 }
                 item.setIcon(R.drawable.ic_bookmark_outline)
                 //    msg("removed from Bookmark")
-            }
+            }*/
 
             return true
         }
         return false
     }
 
-    private fun alertBookmark() {
+    private fun alertBookmark(item: MenuItem) {
         AlertDialog.Builder(this)
                 .setMessage(getString(R.string.remove_alert))
                 .setPositiveButton(getString(R.string.remove)) { dialog, which ->
                     dialog.dismiss()
                     val delId = dbHelper.removeBookmark(sub_id)
-                    if (delId > 0) finish()
+                    item.setIcon(R.drawable.ic_bookmark_filled)
+                    if (delId > 0) {
+                        finish()
+                        Intent(this@StoryActivity, saang::class.java).apply {
+                            putExtra(Constants.BOOkMARK, true)
+                            startActivity(this)
+                        }
+                    }
                 }.setNegativeButton(getString(R.string.cancel)) { dialog, which ->
                     dialog.dismiss()
                 }.show()
@@ -170,6 +179,7 @@ class StoryActivity : AppCompatActivity() {
         val id = dbHelper.addData(model)
         if (id != null) {
             if (id > 0) {
+                isBookmark = true
                 msg(getString(R.string.bkmrk_added))
 
             }

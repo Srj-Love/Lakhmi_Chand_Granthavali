@@ -14,6 +14,10 @@ class Constants {
         const val EXTRA = "extra"
         const val BOOkMARK= "bookmark"
 
+        const val RESULT_CODE= 125
+        const val RESULT_SUCCES= 125
+        const val RESULT_FAILED= 126
+
         val WEBPAGE_HEADER = "<html>\n" +
                 "\n" +
                 "<head>\n" +
