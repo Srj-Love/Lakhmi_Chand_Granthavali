@@ -13,6 +13,7 @@ import com.google.gson.GsonBuilder
 import com.google.gson.stream.JsonReader
 import com.jks.android.myapplication.model.JsonDataModel
 import com.jks.android.myapplication.model.SongDataModel
+import com.jks.android.myapplication.ui.CommentActivity
 import com.jks.android.myapplication.utils.Constants
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
@@ -89,7 +90,12 @@ class MainActivity : AppCompatActivity() {
                 putExtra(Constants.BOOkMARK, true)
                 startActivity(this)
             }
+        }
 
+        btn_cmnt.setOnClickListener {
+            Intent(this@MainActivity, CommentActivity::class.java).apply {
+                startActivity(this)
+            }
         }
         val textView = findViewById<TextView>(R.id.textView)
         textView.isSelected = true

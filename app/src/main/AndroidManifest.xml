@@ -713,6 +713,7 @@
             android:label="45-ले लिया सिर का चीर...." />
         <activity android:name=".ui.SubChildActivity" />
         <activity android:name=".ui.StoryActivity" />
+        <activity android:name=".ui.CommentActivity" />
     </application>
 
 </manifest>

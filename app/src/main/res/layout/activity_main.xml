@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFBAC6"
@@ -10,20 +12,20 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="300dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
         android:src="@drawable/lkh"
-        tools:ignore="ContentDescription">
-
-    </ImageView>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="325dp"
+        android:layout_marginTop="16dp"
         android:ellipsize="marquee"
         android:marqueeRepeatLimit="marquee_forever"
         android:scrollHorizontally="true"
@@ -32,77 +34,86 @@
         android:textColor="#027c10"
         android:textSize="25sp"
         android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText" />
 
 
-    <Button
-        android:id="@+id/Button1"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginBottom="181dp"
-        android:background="#d4ffff"
-        android:drawableEnd="@drawable/ic_arrow_forward_blue_24dp"
-        android:text="कवि परिचय"
-        android:textSize="25sp"
-        tools:ignore="HardcodedText" />
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:layout_editor_absoluteX="1dp">
 
-    <Button
-        android:id="@+id/Button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginBottom="124dp"
-        android:background="#cffff5"
-        android:drawableEnd="@drawable/ic_arrow_forward_blue_24dp"
-        android:text="सांग संग्रह"
-        android:textSize="25sp"
-        tools:ignore="HardcodedText" />
+        <Button
+            android:id="@+id/Button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#d4ffff"
+            android:drawableEnd="@drawable/ic_arrow_forward_blue_24dp"
+            android:text="कवि परिचय"
+            android:textSize="25sp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/Button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#cffff5"
+            android:drawableEnd="@drawable/ic_arrow_forward_blue_24dp"
+            android:text="सांग संग्रह"
+            android:textSize="25sp"
+            tools:ignore="HardcodedText" />
 
 
-    <Button
-        android:id="@+id/Button3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginBottom="67dp"
-        android:background="#cffff5"
-        android:drawableEnd="@drawable/ic_arrow_forward_blue_24dp"
-        android:text="हमारे बारे में"
-        android:textSize="25sp"
-        tools:ignore="HardcodedText" />
+        <Button
+            android:id="@+id/Button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
 
-    <Button
-        android:id="@+id/btn_bkmrk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginBottom="67dp"
-        android:background="#cffff5"
-        android:drawableEnd="@drawable/ic_arrow_forward_blue_24dp"
-        android:text="@string/bkmrk"
-        android:textSize="25sp"
-        tools:ignore="HardcodedText" />
+            android:background="#cffff5"
+            android:drawableEnd="@drawable/ic_arrow_forward_blue_24dp"
+            android:text="हमारे बारे में"
+            android:textSize="25sp"
+            tools:ignore="HardcodedText" />
 
-    <Button
-        android:id="@+id/Button4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginBottom="8dp"
-        android:background="#cffff5"
-        android:drawableEnd="@drawable/ic_arrow_forward_blue_24dp"
-        android:text="सम्पर्क करें"
-        android:textSize="25sp"
-        tools:ignore="HardcodedText" />
-</RelativeLayout>
+        <Button
+            android:id="@+id/btn_bkmrk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#cffff5"
+            android:drawableEnd="@drawable/ic_arrow_forward_blue_24dp"
+            android:text="@string/bkmrk"
+            android:textSize="25sp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btn_cmnt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#cffff5"
+            android:drawableEnd="@drawable/ic_arrow_forward_blue_24dp"
+            android:text="टिप्पणी"
+            android:textSize="25sp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/Button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:background="#cffff5"
+            android:drawableEnd="@drawable/ic_arrow_forward_blue_24dp"
+            android:text="सम्पर्क करें"
+            android:textSize="25sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
