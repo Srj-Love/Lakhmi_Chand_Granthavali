@@ -31,7 +31,7 @@ public class SongChildAdapter extends RecyclerView.Adapter<SongChildAdapter.Song
         this.mListener = mListener;
     }
 
-    class SongViewHolder extends RecyclerView.ViewHolder {
+    public class SongViewHolder extends RecyclerView.ViewHolder {
         Button btn_sang_item;
 
 

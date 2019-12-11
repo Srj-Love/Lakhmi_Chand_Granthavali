@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/rl_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingVertical="10dp"
+            android:paddingLeft="60dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/tv_admin_message_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/admin_buubble"
+                android:elevation="2dp"
+                android:padding="10dp"
+                android:text="Placeholder message"
+                android:textColor="#fff"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tv_admin_message_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_admin_message_body"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:elevation="2dp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="8dp"
+                android:text="21/02/1996"
+                android:textColor="#000"
+                android:textSize="8sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_clnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingVertical="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="60dp">
+
+            <View
+                android:id="@+id/avatar"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/client_buubble"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/avatar"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/avatar"
+                android:paddingBottom="4dp"
+                android:text="Anonymous" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/name"
+                android:layout_alignLeft="@+id/name"
+                android:background="@drawable/client_msg"
+                android:elevation="2dp"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:id="@+id/tv_client_message_body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name"
+                    android:layout_alignLeft="@+id/name"
+                    android:elevation="2dp"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:text="How are you doing? This is a long message that should probably wrap."
+                    android:textIsSelectable="true"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/tv_client_message_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:elevation="2dp"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp"
+                    android:text="21/02/1996"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
