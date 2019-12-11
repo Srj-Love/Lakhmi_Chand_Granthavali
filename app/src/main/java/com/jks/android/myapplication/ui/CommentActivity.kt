@@ -1,27 +1,35 @@
 package com.jks.android.myapplication.ui
 
-import android.content.Intent
+import android.graphics.ColorSpace.Model
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.google.common.reflect.TypeToken
+import com.firebase.ui.database.FirebaseRecyclerOptions
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.gson.GsonBuilder
-import com.jks.android.myapplication.R
-import com.jks.android.myapplication.adapter.SongChildAdapter
-import com.jks.android.myapplication.model.JsonDataModel
-import com.jks.android.myapplication.utils.Constants
+import com.jks.android.myapplication.model.CommentModel
+import com.jks.android.myapplication.model.User
 import kotlinx.android.synthetic.main.activity_cmnt.*
-import kotlinx.android.synthetic.main.activity_saang.*
+
 
 class CommentActivity : AppCompatActivity() {
 
     val TAG = CommentActivity::class.java.simpleName
 
+    private lateinit var database: DatabaseReference
+
+    companion object {
+        const val COLLECTION_KEY = "Chat"
+        const val DOCUMENT_KEY = "Message"
+        const val NAME_FIELD = "Name"
+        const val TEXT_FIELD = "Text"
+        const val TEXT_IS_ADMIN = "IsAdmin"
+        const val COLLECTION_NAME = "Comment"
+        const val DOCUMENT_USER = "User"
+
+
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,9 +38,11 @@ class CommentActivity : AppCompatActivity() {
         if (supportActionBar != null) supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         val db = FirebaseFirestore.getInstance()
+        database = FirebaseDatabase.getInstance().reference
 
         button_chatbox_send.setOnClickListener {
-            insertData(db)
+            //            insertData(db)
+            sendMessage(db)
         }
 
     }
@@ -42,10 +52,10 @@ class CommentActivity : AppCompatActivity() {
 
         val msg = edittext_chatbox.text.toString()
         val docData = hashMapOf(
-                "msg" to "$msg"
+                "msg" to msg
         )
         // Add a new document with a generated ID
-        val docId = db.collection("Comment")
+        val docId = db.collection(COLLECTION_NAME)
                 .document().id
 //              Log.d(TAG, "Doc ID: $docId")
 
@@ -59,5 +69,32 @@ class CommentActivity : AppCompatActivity() {
                 .addOnFailureListener { e ->
                     Log.w(TAG, "Error adding document", e)
                 }
+    }
+
+    private fun sendMessage(db: FirebaseFirestore) {
+
+
+        val msg = edittext_chatbox.text.toString()
+                .trimIndent()
+
+
+        val model = CommentModel(false, msg = msg)
+        database.child("User")
+                .push()
+                .setValue(model)
+
+        val query = FirebaseDatabase.getInstance()
+                .reference
+                .child("User")
+                .orderByKey("score")
+
+        val options = FirebaseRecyclerOptions.Builder<CommentModel>()
+                .setQuery(query) { snapshot ->
+                    CommentModel(snapshot.child("isAdmin").value.toString(),
+                            snapshot.child("date").value.toString())
+                }
+                .build()
+
+
     }
 }

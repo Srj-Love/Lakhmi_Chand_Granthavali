@@ -8,6 +8,7 @@
     <string name="cancel">रद्द करें</string>
     <string name="bkmrk_added">बुकमार्क में सफलतापूर्वक जोड़ा गया</string>
     <string name="bkmrk">बुकमार्क</string>
+    <string name="user_pref">User</string>
 
     <string-array name="song_list">
         "1— सत्यवान सावित्री",
