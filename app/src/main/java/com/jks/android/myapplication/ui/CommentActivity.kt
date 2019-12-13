@@ -18,9 +18,9 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.jks.android.myapplication.R
 import com.jks.android.myapplication.model.CommentModel
 import com.jks.android.myapplication.ui.CommentActivity
+import com.jks.android.myapplication.utils.UserPref
 import kotlinx.android.synthetic.main.activity_cmnt.*
 import kotlinx.android.synthetic.main.item_admin_cmnt_list.view.*
-import kotlin.random.Random
 
 
 class CommentActivity : AppCompatActivity() {
@@ -30,6 +30,10 @@ class CommentActivity : AppCompatActivity() {
     private lateinit var database: DatabaseReference
     private var adapter: FirebaseRecyclerAdapter<CommentModel, ServiceViewHolder>? = null
     lateinit var linearLayoutManager: LinearLayoutManager
+
+    val pref: UserPref by lazy {
+        UserPref.getInstance(this@CommentActivity)
+    }
 
     companion object {
         const val COLLECTION_KEY = "Chat"
@@ -80,7 +84,7 @@ class CommentActivity : AppCompatActivity() {
                 .trimIndent()
 
 
-        val model = CommentModel(Random.nextBoolean(), msg = msg)
+        val model = CommentModel(pref.isAdmin, msg = msg)
 
         database.child("User")
                 .push()

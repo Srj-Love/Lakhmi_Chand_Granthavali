@@ -7,8 +7,15 @@
     <string name="remove">निकालें</string>
     <string name="cancel">रद्द करें</string>
     <string name="bkmrk_added">बुकमार्क में सफलतापूर्वक जोड़ा गया</string>
-    <string name="bkmrk">बुकमार्क</string>
+    <string name="bkmrk">Bookmark</string>
+    <string name="cmnt">Comment</string>
+    <string name="rate">Rate Us</string>
+    <string name="other_app">Other Apps</string>
     <string name="user_pref">User</string>
+    <string name="marquee_text">सूर्यकवि पंडित लखमीचन्द ग्रन्थावली.....सूर्यकवि पंडित लखमीचन्द ग्रन्थावली ..... सूर्यकवि पंडित लखमीचन्द ग्रन्थावली... सूर्यकवि पंडित लखमीचन्द ग्रन्थावली</string>
+    <string name="navigation_drawer_open">Start</string>
+    <string name="navigation_drawer_close" />
+    <string name="enter_the_pin_for_admin_access">Enter the Pin for Admin Access</string>
 
     <string-array name="song_list">
         "1— सत्यवान सावित्री",

@@ -1,119 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/relativeLayout"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFBAC6"
-    tools:context=".MainActivity"
-    tools:layout_editor_absoluteY="81dp">
+    android:id="@+id/drawer"
+    android:layout_height="match_parent">
 
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/lkh"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="ContentDescription" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ellipsize="marquee"
-        android:marqueeRepeatLimit="marquee_forever"
-        android:scrollHorizontally="true"
-        android:singleLine="true"
-        android:text="सूर्यकवि पंडित लखमीचन्द ग्रन्थावली.....सूर्यकवि पंडित लखमीचन्द ग्रन्थावली ..... सूर्यकवि पंडित लखमीचन्द ग्रन्थावली... सूर्यकवि पंडित लखमीचन्द ग्रन्थावली"
-        android:textColor="#027c10"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText" />
-
-
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:layout_editor_absoluteX="1dp">
+        android:layout_height="match_parent"
+        android:background="#FFBAC6"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteY="81dp">
 
-        <Button
-            android:id="@+id/Button1"
-            android:layout_width="match_parent"
+
+        <ImageView
+            android:id="@+id/iv_main_img"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/lkh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#d4ffff"
-            android:drawableEnd="@drawable/ic_arrow_forward_blue_24dp"
-            android:text="कवि परिचय"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="@string/marquee_text"
+            android:textColor="#027c10"
             android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="HardcodedText" />
 
-        <Button
-            android:id="@+id/Button2"
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="#cffff5"
-            android:drawableEnd="@drawable/ic_arrow_forward_blue_24dp"
-            android:text="सांग संग्रह"
-            android:textSize="25sp"
-            tools:ignore="HardcodedText" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_main_img">
+
+            <Button
+                android:id="@+id/Button1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorAccent"
+                android:drawableEnd="@drawable/ic_arrow_forward_blue_24dp"
+                android:text="कवि परिचय"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/Button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorAccent"
+                android:drawableEnd="@drawable/ic_arrow_forward_blue_24dp"
+                android:text="सांग संग्रह"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                tools:ignore="HardcodedText" />
 
 
-        <Button
-            android:id="@+id/Button3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            <Button
+                android:id="@+id/Button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorAccent"
+                android:drawableEnd="@drawable/ic_arrow_forward_blue_24dp"
+                android:text="हमारे बारे में"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                tools:ignore="HardcodedText" />
 
-            android:background="#cffff5"
-            android:drawableEnd="@drawable/ic_arrow_forward_blue_24dp"
-            android:text="हमारे बारे में"
-            android:textSize="25sp"
-            tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <Button
-            android:id="@+id/btn_bkmrk"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="#cffff5"
-            android:drawableEnd="@drawable/ic_arrow_forward_blue_24dp"
-            android:text="@string/bkmrk"
-            android:textSize="25sp"
-            tools:ignore="HardcodedText" />
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header_main"
+        android:fitsSystemWindows="true"
+        app:itemTextAppearanceActive="@color/colorAccent"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_home" />
 
-        <Button
-            android:id="@+id/btn_cmnt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="#cffff5"
-            android:drawableEnd="@drawable/ic_arrow_forward_blue_24dp"
-            android:text="टिप्पणी"
-            android:textSize="25sp"
-            tools:ignore="HardcodedText" />
-
-        <Button
-            android:id="@+id/Button4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-
-            android:background="#cffff5"
-            android:drawableEnd="@drawable/ic_arrow_forward_blue_24dp"
-            android:text="सम्पर्क करें"
-            android:textSize="25sp"
-            tools:ignore="HardcodedText" />
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -4,20 +4,22 @@
     package="com.jks.android.myapplication">
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:name=".App"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".P60"
-            android:label="34-तेरा पूर्णमल बदमाश मेरे तै"/>
+        <activity
+            android:name=".P60"
+            android:label="34-तेरा पूर्णमल बदमाश मेरे तै" />
 
 
-        <activity android:name=".P34"
-            android:label="24-बूढा बालम बीर सवासण जतन"/>
+        <activity
+            android:name=".P34"
+            android:label="24-बूढा बालम बीर सवासण जतन" />
         <activity android:name=".nd48" />
         <activity android:name=".updashek" />
         <activity android:name=".heerranja" />
@@ -711,9 +713,15 @@
         <activity
             android:name=".rh45"
             android:label="45-ले लिया सिर का चीर...." />
-        <activity android:name=".ui.SubChildActivity" />
-        <activity android:name=".ui.StoryActivity" />
-        <activity android:name=".ui.CommentActivity" />
+        <activity
+            android:name=".ui.SubChildActivity"
+            android:parentActivityName=".saang" />
+        <activity
+            android:name=".ui.StoryActivity"
+            />
+        <activity
+            android:name=".ui.CommentActivity"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

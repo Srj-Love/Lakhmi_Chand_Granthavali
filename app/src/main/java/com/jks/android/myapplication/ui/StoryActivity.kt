@@ -57,7 +57,7 @@ class StoryActivity : AppCompatActivity() {
         setContentView(R.layout.activity_story)
 
 
-        if (supportActionBar != null) supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+//        if (supportActionBar != null) supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         ID = intent.getIntExtra(Constants.ID, 0)
         sub_id = intent.getIntExtra(Constants.SUB_ID, 0)

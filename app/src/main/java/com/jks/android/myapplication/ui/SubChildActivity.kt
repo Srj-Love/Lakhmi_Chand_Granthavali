@@ -36,7 +36,7 @@ class SubChildActivity : AppCompatActivity(), SongChildAdapter.SongClickListener
         setContentView(R.layout.activity_saang)
 
 
-        if (supportActionBar != null) supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+//        if (supportActionBar != null) supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         if (intent.hasExtra(Constants.BOOkMARK)) {
             isBookmark = intent.getBooleanExtra(Constants.BOOkMARK, false)
@@ -52,8 +52,6 @@ class SubChildActivity : AppCompatActivity(), SongChildAdapter.SongClickListener
             mdataModel = gson.fromJson(mStringData, groupListType)
 
         }
-
-
 
         pb.visibility = View.GONE
 
