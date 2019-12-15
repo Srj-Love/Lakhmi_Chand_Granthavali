@@ -43,6 +43,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
         val button1 = findViewById<Button>(R.id.Button1)
         val button2 = findViewById<Button>(R.id.Button2)
 
@@ -75,28 +77,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 //        insertData(db)
 
 
-        /*mList.forEach {
-
-            // Add a new document with a generated ID
-            val docId = db.collection("Songs")
-                    .document().id
-            Log.d(TAG, "Doc ID: $docId")
-
-
-
-
-
-            db.collection("Songs")
-                    .document(docId)
-                    .set(it)
-                    .addOnSuccessListener { documentReference ->
-
-                        Log.d(TAG, "DocumentSnapshot added with ID: $documentReference")
-                    }
-                    .addOnFailureListener { e ->
-                        Log.w(TAG, "Error adding document", e)
-                    }
-        }*/
 
 
         button1.setOnClickListener {
@@ -129,7 +109,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun showAdminPopup() {
-        val database = FirebaseDatabase.getInstance().reference
+        val database = FirebaseDatabase.getInstance().reference // connection
 
 
         var alertDialogBuilder = androidx.appcompat.app.AlertDialog.Builder(this)
@@ -146,6 +126,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 .setPositiveButton("Save",
                         { dialog, id ->
                             dialog?.dismiss()
+
+                            //save if it is  admin or not
+
                             val pwd = database.child("admin_pwd")
                             pwd.addValueEventListener(object : ValueEventListener {
                                 override fun onCancelled(p0: DatabaseError) {
@@ -156,7 +139,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                                     val pass = dataSnapshot.getValue()
 
                                     if (pass != null) {
-                                        if (pass.equals(userInput.text.toString())) {
+                                        if (pass.equals(userInput.text.toString())) { // check server password with device password
                                             UserPref.getInstance(this@MainActivity).isAdmin = true
                                             Toast.makeText(this@MainActivity, "PIN Correct", Toast.LENGTH_SHORT).show()
                                         } else {
@@ -254,6 +237,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return weatherList
     }
 
+
+    // when user selects any menu item from drawer
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         val id = item!!.itemId
         if (id == android.R.id.home) { //You can get

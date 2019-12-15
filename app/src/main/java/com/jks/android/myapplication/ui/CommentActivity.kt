@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -14,6 +15,7 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ServerValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.jks.android.myapplication.R
 import com.jks.android.myapplication.model.CommentModel
@@ -21,6 +23,8 @@ import com.jks.android.myapplication.ui.CommentActivity
 import com.jks.android.myapplication.utils.UserPref
 import kotlinx.android.synthetic.main.activity_cmnt.*
 import kotlinx.android.synthetic.main.item_admin_cmnt_list.view.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class CommentActivity : AppCompatActivity() {
@@ -59,9 +63,11 @@ class CommentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cmnt)
 
-        if (supportActionBar != null) supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        if (supportActionBar != null) {
+            supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        }
 
-        val db = FirebaseFirestore.getInstance()
+        val db = FirebaseFirestore.getInstance() // connection
         database = FirebaseDatabase.getInstance().reference
 
         rcv_message_list.setHasFixedSize(true)
@@ -77,17 +83,24 @@ class CommentActivity : AppCompatActivity() {
     }
 
 
+    // staqrt sending messages
     private fun sendMessage(db: FirebaseFirestore) {
 
 
         val msg = edittext_chatbox.text.toString()
                 .trimIndent()
 
+        if (msg.isNullOrEmpty()) {
+            Toast.makeText(this@CommentActivity, "Please write a comment", Toast.LENGTH_SHORT).show()
+            return
+        }
 
-        val model = CommentModel(pref.isAdmin, msg = msg)
+        val map = mutableMapOf<String, Any>()
+        map.put("timestamp", ServerValue.TIMESTAMP)
+        val model = CommentModel(pref.isAdmin, timestamp = map, msg = msg)
 
         database.child("User")
-                .push()
+                .push() // make a new key of comment
                 .setValue(model)
 
 
@@ -120,11 +133,14 @@ class CommentActivity : AppCompatActivity() {
                     holder.ll_clnt.visibility = View.GONE
                     holder.rl_admin.visibility = View.VISIBLE
                     holder.tv_admin_message_body.text = model.msg
+                    holder.tv_admin_message_time.text = getDate(model.timestamp?.get("timestamp") as Long)
+//                    println(Date(model.timestamp?.get("timestamp")as Long))
                 } else {
                     holder.ll_clnt.visibility = View.VISIBLE
                     holder.rl_admin.visibility = View.GONE
-
                     holder.client_message_body.text = model.msg
+                    holder.tv_client_message_time.text = getDate(model.timestamp?.get("timestamp") as Long)
+//                    println(Date(model.timestamp?.get("timestamp")as Long))
 
                 }
 
@@ -135,7 +151,6 @@ class CommentActivity : AppCompatActivity() {
         adapter?.registerAdapterDataObserver(object : RecyclerView.AdapterDataObserver() {
             override fun onItemRangeInserted(positionStart: Int, itemCount: Int) {
                 super.onItemRangeInserted(positionStart, itemCount)
-                println("Somethingn is happened")
 
                 val friendlyMessageCount: Int = adapter?.getItemCount()!!
                 val lastVisiblePosition: Int = linearLayoutManager.findLastCompletelyVisibleItemPosition()
@@ -168,6 +183,8 @@ class CommentActivity : AppCompatActivity() {
 
         var tv_admin_message_body: TextView
         var client_message_body: TextView
+        var tv_admin_message_time: TextView
+        var tv_client_message_time: TextView
         var rl_admin: LinearLayout
         var ll_clnt: LinearLayout
 
@@ -175,12 +192,18 @@ class CommentActivity : AppCompatActivity() {
         init {
             val mView: View = itemView
             tv_admin_message_body = itemView.tv_admin_message_body
+            tv_admin_message_time = itemView.tv_admin_message_time
             client_message_body = itemView.tv_client_message_body
+            tv_client_message_time = itemView.tv_client_message_time
             rl_admin = itemView.rl_admin
             ll_clnt = itemView.ll_clnt
 
         }
     }
 
-
+    private fun getDate(time: Long): String? {
+        val date = Date(time) // *1000 is to convert seconds to milliseconds
+        val sdf = SimpleDateFormat("dd/MM/yyyy",Locale.ENGLISH) // the format of your date
+        return sdf.format(date)
+    }
 }

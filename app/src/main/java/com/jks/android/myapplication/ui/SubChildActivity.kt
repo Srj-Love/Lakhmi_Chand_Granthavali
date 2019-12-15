@@ -36,7 +36,7 @@ class SubChildActivity : AppCompatActivity(), SongChildAdapter.SongClickListener
         setContentView(R.layout.activity_saang)
 
 
-//        if (supportActionBar != null) supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        if (supportActionBar != null) supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         if (intent.hasExtra(Constants.BOOkMARK)) {
             isBookmark = intent.getBooleanExtra(Constants.BOOkMARK, false)
@@ -46,7 +46,9 @@ class SubChildActivity : AppCompatActivity(), SongChildAdapter.SongClickListener
             val mStringData = intent.getStringExtra(Constants.EXTRA)
             id = intent.getIntExtra(Constants.ID, 0)
             name = intent.getStringExtra(Constants.NAME)
+            supportActionBar?.title = name
 
+            // extract all the data from intent and make a list
             val groupListType = object : TypeToken<JsonDataModel.Data>() {}.type
             val gson = GsonBuilder().create()
             mdataModel = gson.fromJson(mStringData, groupListType)

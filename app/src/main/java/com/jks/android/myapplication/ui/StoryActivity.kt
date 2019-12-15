@@ -64,6 +64,8 @@ class StoryActivity : AppCompatActivity() {
         NAME = intent.getStringExtra(Constants.NAME)
         sub_name = intent.getStringExtra(Constants.SUB_NAME)
 
+        supportActionBar?.title = sub_name
+
 
         if (intent.hasExtra(Constants.STORY)) {
             WEBPAGE_BODY = intent.getStringExtra(Constants.STORY)
@@ -107,6 +109,7 @@ class StoryActivity : AppCompatActivity() {
         return true
     }
 
+    // when user press bookmark btn
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         if (item!!.itemId === R.id.bookmark) {
 

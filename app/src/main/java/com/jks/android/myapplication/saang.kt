@@ -32,6 +32,7 @@ class saang : AppCompatActivity(), SongClickListener {
     var mAdapter: SongAdapter? = null
     var mList: ArrayList<JsonDataModel.Data>? = null
     lateinit var recyclerView: RecyclerView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_saang)
@@ -54,10 +55,12 @@ class saang : AppCompatActivity(), SongClickListener {
         recyclerView.layoutManager = LinearLayoutManager(this@saang)
         recyclerView.addItemDecoration(DividerItemDecoration(this@saang, DividerItemDecoration.HORIZONTAL))
 
+
+        // check if user pressed bookmark button or Katha Sangrah Button
         if (isBookmark) {
-            getBookmarkData()
+            getBookmarkData() // load bookmark data
         } else {
-            getQueryData(db)
+            getQueryData(db) // load server data
         }
 
 
@@ -73,29 +76,6 @@ class saang : AppCompatActivity(), SongClickListener {
 
     }
 
-    private val data: ArrayList<JsonDataModel.Data>
-        get() {
-            if (mList != null && mList!!.size > 0) mList!!.clear()
-            mList = ArrayList()
-            /*mList!!.add(SongModel("1— सत्यवान सावित्री", "sataywan"))
-            mList!!.add(SongModel("2— पूर्णमल", "puranmal"))
-            mList!!.add(SongModel("3— नल—दमयन्ती", "Naldamyanti"))
-            mList!!.add(SongModel("4— राजा—हरिश्चन्द्र", "RajaHarishchander"))
-            mList!!.add(SongModel("5— चापसिंह", "Chapsingh"))
-            mList!!.add(SongModel("6— सेठ- ताराचंद", "SethTarachand"))
-            mList!!.add(SongModel("7—चन्द्रगुप्त  धर्ममालकी ", "chnder"))
-            mList!!.add(SongModel("8— शाही — लकडहारा", "sahilakadhara"))
-            mList!!.add(SongModel("9— मीरा बाई", "meerabai"))
-            mList!!.add(SongModel("10— महाभारत (चीर पर्व)", "chirparv"))
-            mList!!.add(SongModel("11— कीचक पर्व", "kichakparv"))
-            mList!!.add(SongModel("12— नौटंकी", "notanki"))
-            mList!!.add(SongModel("13— पदमावत ", "padmavat"))
-            mList!!.add(SongModel("14— चन्दकिरण", "chandkiran"))
-            mList!!.add(SongModel("15— ज्यानी चोर", "jaynichor"))
-            mList!!.add(SongModel("16— हीर रांझा", "heerranja"))
-            mList!!.add(SongModel("17— उपदेशक भजन", "updashek"))*/
-            return mList as ArrayList<JsonDataModel.Data>
-        }
 
     private fun getQueryData(db: FirebaseFirestore) {
 
@@ -122,6 +102,7 @@ class saang : AppCompatActivity(), SongClickListener {
                 }
                 .addOnFailureListener { exception ->
                     pb.visibility = View.INVISIBLE
+                    Toast.makeText(this@saang, "Error getting documents:",Toast.LENGTH_SHORT).show()
                     Log.d(TAG, "Error getting documents: ", exception)
                 }
     }
